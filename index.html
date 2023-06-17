@@ -7,76 +7,105 @@
     <title>Document</title>
 </head>
 <body>
-    <p class="dropdown">Привет:)</p>
-<div class="dropdown">
-<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-Dropdown button
-</button>
-<div class="menu dropdown-menu" aria-labelledby="dropdownMenuButton">
-<a class="dropdown-item" href="#">Action</a>
-<a class="dropdown-item" href="#">Another action</a>
-<a class="dropdown-item" href="#">Something else here</a>
-</div>
-</div>
+    <p class="super_element">Привет</p>
 
+    <img src="https://placeimg.com/50/50/animals" alt="">
+    <img src="https://placeimg.com/50/50/arch" alt="">
+    <img src="https://placeimg.com/50/50/nature" alt="">
+    <img src="https://placeimg.com/50/50/people" alt="">
+    <img src="https://placeimg.com/50/50/tech" alt="">
+    <img src="https://placeimg.com/50/50/tech/grayscale" alt="">
+    <img src="https://placeimg.com/50/50/tech/sepia" alt="">
+    
+    <br>
+    
+    <button>Кнопка</button>
+    <button class="super_element">Кнопка с классом btn</button>
+    <button>Кнопка</button>
+    
+    <br>
+    
+    <textarea></textarea>
+    
+    <br>
+    
+    <ul>
+      <li>
+        <button>Кнопка 1</button>
+      </li>
+      <li>
+        <button>Кнопка 2</button>
+      </li>
+      <li>
+        <button>Кнопка 3</button>
+      </li>
+      <li>
+        <button>Кнопка 4</button>
+      </li>
+    </ul>
 
-    <script src="script.js">
-
-    </script>
+    <script src="script.js"></script>
     <script>
-        // Задача 1
-        // const menuAdd = document.querySelectorAll('.dropdown-item');
-        // menuAdd.forEach(i =>
-        // {
-        //     i.classList.add('super-dropdown');
-        // });
-        // console.log(menuAdd);
 
+        // Задача 1
+
+        // const loaded = document.addEventListener('DOMContentLoaded', function(event)
+        // {
+        //     console.log('Content is loaded');
+        // });
+
+        // console.log(loaded);
         // Задача 2
 
-        // const button = document.querySelector('.btn');
+        // const loadedPage = window.addEventListener('load', function(event)
+        // {
+        //     console.log('Page is loaded');
+        // });
 
-        // if(button.classList.contains('btn-secondary'))
-        // {
-        //     button.classList.remove('btn-secondary');
-        // }
-        // else
-        // {
-        //     button.classList.add('btn-secondary');
-        // }
-        // console.log(button);
+        // console.log(loadedPage);
 
         // Задача 3
 
-        // const menu = document.querySelector('.menu');
-
-        // if(menu.classList.contains('dropdown-menu')) menu.classList.remove('dropdown-menu')
-        // console.log(menu);
+        // document.addEventListener('click', function(e)
+        // {
+        //     const targetName = e.target;
+        //     const targetParent = e.target.parentNode;
+        //     const targetTag = e.target.tagName.toLowerCase();
+                // console.log(' your target ');
+        //     console.log(targetName);
+                // console.log(' parent ');
+        //     console.log(targetParent);
+                // console.log(' tag name ');
+        //    console.log(targetTag);
+        // })
 
         // Задача 4
 
-        // const targetElement = document.querySelector('div.dropdown');
-        // targetElement.insertAdjacentHTML('afterbegin', '<a href="#">link</a>');
-        // console.log(targetElement.firstElementChild);
+            // const textarea = document.querySelector('textarea');
+            // textarea.addEventListener('mouseover' , function (e) {
+            //     console.log('Вы навели на текст');
+            // })
         
         // Задача 5
 
-        // const btn = document.querySelector('.btn');
-        // btn.id = 'superDropdown'
-        // console.log(btn.id);
+                //   const buttonEl = document.querySelector('ul');
+
+                //   buttonEl.addEventListener('click', function(e){
+                //     if(e.target.tagName == 'BUTTON')
+                //       console.log(e.target.textContent);
+                //   })
 
         // Задача 6
-
-        // const menu = document.querySelector('.menu');
-        //     menu.dataset.dd = '3'
-        // console.log(menu.data.dd);
+                
+        // Проблем таких не возникло
 
         // Задача 7
 
-        //   const btn = document.querySelector('.btn')
-        //   console.log(btn.type);
-        //   btn.removeAttribute(type)
-        //   console.log(btn.type);
+      //  const changeColor = document.querySelectorAll('li');
+      //  console.log(changeColor);
+      //  for (let i = 1; i < changeColor.length; i+=2) {
+      //   changeColor[i].style.backgroundColor = "#8B0000";
+      //  }  
 
 
 
