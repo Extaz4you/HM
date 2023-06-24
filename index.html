@@ -7,108 +7,90 @@
     <title>Document</title>
 </head>
 <body>
-    <p class="super_element">Привет</p>
+  <div class="product-box"></div>
+<script src="script.js"></script>
+<style>
+  .product-box {
+    display: grid;
+    grid-template-columns: repeat(3,362px);
+    gap: 32px;
+}
 
-    <img src="https://placeimg.com/50/50/animals" alt="">
-    <img src="https://placeimg.com/50/50/arch" alt="">
-    <img src="https://placeimg.com/50/50/nature" alt="">
-    <img src="https://placeimg.com/50/50/people" alt="">
-    <img src="https://placeimg.com/50/50/tech" alt="">
-    <img src="https://placeimg.com/50/50/tech/grayscale" alt="">
-    <img src="https://placeimg.com/50/50/tech/sepia" alt="">
+</style>
+<script>
+  const productData = 
+  [
+    {
+      img: "img.svg",
+      alt: "product photo",
+      name: "ELLERY X M'O CAPSULE",
+      text: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+      price: "$52.00"
+    },
+    {
+      img: "img.svg",
+      alt: "product photo",
+      name: "ELLERY X M'O CAPSULE",
+      text: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+      price: "$52.00"
+    },
+    {
+      img: "img.svg",
+      alt: "product photo",
+      name: "ELLERY X M'O CAPSULE",
+      text: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+      price: "$52.00"
+    },
+    {
+      img: "img.svg",
+      alt: "product photo",
+      name: "ELLERY X M'O CAPSULE",
+      text: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+      price: "$52.00"
+    },
+    {
+      img: "img.svg",
+      alt: "product photo",
+      name: "ELLERY X M'O CAPSULE",
+      text: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+      price: "$52.00"
+    },
+    {
+      img: "img.svg",
+      alt: "product photo",
+      name: "ELLERY X M'O CAPSULE",
+      text: "Known for her sculptural takes on traditional tailoring, Australian arbiter of cool Kym Ellery teams up with Moda Operandi.",
+      price: "$52.00"
+    }
+  ];
+  const productBox = document.querySelector('.product-box');
+  productData.forEach(product => 
+  {
+    const productEl = document.createElement('div');
+    productEl.classList.add('product');
     
-    <br>
-    
-    <button>Кнопка</button>
-    <button class="super_element">Кнопка с классом btn</button>
-    <button>Кнопка</button>
-    
-    <br>
-    
-    <textarea></textarea>
-    
-    <br>
-    
-    <ul>
-      <li>
-        <button>Кнопка 1</button>
-      </li>
-      <li>
-        <button>Кнопка 2</button>
-      </li>
-      <li>
-        <button>Кнопка 3</button>
-      </li>
-      <li>
-        <button>Кнопка 4</button>
-      </li>
-    </ul>
+    const productImg = document.createElement('img');
+    productImg.classList.add('product_img');
+    productImg.setAttribute('alt', product.alt);
+    productImg.src = product.img;
 
-    <script src="script.js"></script>
-    <script>
+    const productHeader = document.createElement('h3');
+    productHeader.textContent = product.name;
 
-        // Задача 1
+    const productText = document.createElement('p');
+    productText.textContent = product.text;
 
-        // const loaded = document.addEventListener('DOMContentLoaded', function(event)
-        // {
-        //     console.log('Content is loaded');
-        // });
+    const productPrice = document.createElement('p');
+    productPrice.textContent = product.price;
 
-        // console.log(loaded);
-        // Задача 2
-
-        // const loadedPage = window.addEventListener('load', function(event)
-        // {
-        //     console.log('Page is loaded');
-        // });
-
-        // console.log(loadedPage);
-
-        // Задача 3
-
-        // document.addEventListener('click', function(e)
-        // {
-        //     const targetName = e.target;
-        //     const targetParent = e.target.parentNode;
-        //     const targetTag = e.target.tagName.toLowerCase();
-                // console.log(' your target ');
-        //     console.log(targetName);
-                // console.log(' parent ');
-        //     console.log(targetParent);
-                // console.log(' tag name ');
-        //    console.log(targetTag);
-        // })
-
-        // Задача 4
-
-            // const textarea = document.querySelector('textarea');
-            // textarea.addEventListener('mouseover' , function (e) {
-            //     console.log('Вы навели на текст');
-            // })
-        
-        // Задача 5
-
-                //   const buttonEl = document.querySelector('ul');
-
-                //   buttonEl.addEventListener('click', function(e){
-                //     if(e.target.tagName == 'BUTTON')
-                //       console.log(e.target.textContent);
-                //   })
-
-        // Задача 6
-                
-        // Проблем таких не возникло
-
-        // Задача 7
-
-      //  const changeColor = document.querySelectorAll('li');
-      //  console.log(changeColor);
-      //  for (let i = 1; i < changeColor.length; i+=2) {
-      //   changeColor[i].style.backgroundColor = "#8B0000";
-      //  }  
+    productEl.appendChild(productImg);
+    productEl.appendChild(productHeader);
+    productEl.appendChild(productText);
+    productEl.appendChild(productPrice);
+    productBox.appendChild(productEl);
+  });
 
 
-
-    </script>
+</script>
 </body>
 </html>
